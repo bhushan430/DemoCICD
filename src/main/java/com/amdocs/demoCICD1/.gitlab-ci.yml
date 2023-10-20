@@ -1,0 +1,15 @@
+image: rvancea/maven-chrome-jdk20:latest
+
+build:
+  stage: build
+  script:
+     - mvn compile
+  tags:
+     - ci
+
+test:
+   stage: test
+   script:
+      - mvn clean test
+   tags:
+      - ci
